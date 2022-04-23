@@ -31,4 +31,11 @@ class SecondController extends Controller
 
         return redirect()->back()->with('status', 'student updated!');
     }
+
+    // public function show(Request $request)
+    // {
+    //   return $request->session()->all();
+ 
+        
+    // }
 }

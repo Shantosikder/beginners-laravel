@@ -5,6 +5,8 @@ use App\Http\Controllers\FirstController;
 use App\Http\Controllers\SecondController;
 use App\Http\Controllers\ThardControlle;
 use Illuminate\Support\Facades\View;
+use Illuminate\Http\Request;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -38,6 +40,17 @@ Route::get('/about', function () {
     return view('about', ['name' => 'shanto']);
 });
 
+//session //
+
+// Route::get('/show', function ( Request $request) {
+//  $request->session()->put('shanto', 'Task was successful!');
+// });
+
+Route::get('/all', function(Request $request){
+    //$request->session(['name'=>'shanto']);
+     return $request->session()->all();
+    //dd($request);
+});
 
 
 
