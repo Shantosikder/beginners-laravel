@@ -11,6 +11,7 @@ class SecondController extends Controller
 {
     public function myparsonal()
     {
+        //abort(404);
         return view('mypage');
 
         //dd(app());
@@ -36,12 +37,13 @@ class SecondController extends Controller
 
    public function valildstore(Request $request)
 {
+
     $validated = $request->validate([
         'name' => 'required|max:55',
-        'email' => 'required|unique:users|min:7',
+        'email' => 'required|unique:users|max:20',
         'password' => 'required|min:5|max:12',
 
-        dd($request->all())
+        //dd($request->all())
     ]);
  
     // The blog post is valid...
