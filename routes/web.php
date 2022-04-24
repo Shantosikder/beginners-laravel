@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\View;
 use Illuminate\Http\Request;
 
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -38,6 +39,8 @@ Route::post('/about',[SecondController::class,'aboutstore'])->name('about.store'
 Route::post('/store',[SecondController::class,'valildstore']);
 
 
+
+
 Route::get('test',[ThardControlle::class,'test']);
 
 Route::get('/about', function () {
@@ -55,6 +58,12 @@ Route::get('/all', function(Request $request){
      return $request->session()->all();
     //dd($request);
 });
+
+// Route::get('/all', function(Request $request){
+//       log::info('my name is shanto sikder '.rand(1,5));
+//         return redirect()->to('/');
+// });
+
 
 
 

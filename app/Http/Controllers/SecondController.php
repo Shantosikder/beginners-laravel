@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\ThardControlle;
+use Illuminate\Support\Facades\Log;
 
 
 
@@ -13,10 +14,13 @@ class SecondController extends Controller
     {
         //abort(404);
         return view('mypage');
+        //log::info('my name is shanto sikder',rand(1,5));
+        //return redirect()->to('/');
 
         //dd(app());
     }
 
+    
     //student store ///
 
     public function aboutstore(Request $request)
@@ -43,8 +47,13 @@ class SecondController extends Controller
         'email' => 'required|unique:users|max:20',
         'password' => 'required|min:5|max:12',
 
+
+
         //dd($request->all())
     ]);
+
+     log::channel('contactlog')->info('the contact submited '. rand(1,20));
+        return redirect()->back();
  
     // The blog post is valid...
 }
