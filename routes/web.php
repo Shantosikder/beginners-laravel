@@ -33,6 +33,10 @@ Route::get('/mypage',[SecondController::class,'myparsonal'])->name('mypage');
 //Route::post('/student/store',[SecondController::class,'studentstore'])->name('student.store');
 Route::post('/about',[SecondController::class,'aboutstore'])->name('about.store');
 
+//form validation///
+
+Route::post('/store',[SecondController::class,'valildstore']);
+
 
 Route::get('test',[ThardControlle::class,'test']);
 
